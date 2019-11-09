@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div>    
     <input type="text" v-on:input="onInput" />
   </div>
 </template>
