@@ -1,10 +1,11 @@
 <template>
-  <div>    
+  <div>     
     <input type="text" v-on:input="onInput" />
   </div>
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   name: 'SearchBar',
   methods: {
