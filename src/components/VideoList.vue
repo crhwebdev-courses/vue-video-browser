@@ -1,13 +1,16 @@
 <template>
   <ul>
-    VideoList
+    {{videos.length}}
   </ul>
 </template>
 
 <script>
 /* eslint-disable */
 export default {
-  name: 'VideoList'
+  name: 'VideoList',
+  props: {
+    videos: Array
+  }
 };
 
 </script>
