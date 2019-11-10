@@ -15,6 +15,11 @@ import VideoList from './components/VideoList';
 //Note: need to list all components used in components property
 export default {
   name: 'App',
+  data: function(){
+    return {
+      videos: []
+    };
+  },
   components: {
     SearchBar,
     VideoList
@@ -28,7 +33,7 @@ export default {
           part: 'snippet',
           q: searchTerm
         }
-      }).then(response => console.log(response));
+      }).then(response => {this.videos = response.data.items; });
     }
   }  
 };
