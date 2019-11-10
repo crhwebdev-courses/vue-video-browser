@@ -9,6 +9,7 @@
     "dev": "cross-env NODE_ENV=development vue-cli-service serve --mode development --host localhost --open"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "core-js": "^3.3.2",
     "vue": "^2.6.10"
   },
