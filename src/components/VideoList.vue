@@ -1,7 +1,10 @@
 <template>
-  <ul>
-    <VideoListItem />
+<div>
+  <ul>  
+    <VideoListItem v-for="video in videos" v-bind:key="video.id.videoId">
+    </VideoListItem>
   </ul>
+</div>
 </template>
 
 <script>
@@ -10,12 +13,12 @@ import VideoListItem from './VideoListItem';
 
 export default {
   name: 'VideoList',
-  props: {
-    videos: Array
-  },
   components: {
     VideoListItem
-  }
+  },
+  props: {
+    videos: Array
+  }  
 };
 
 </script>
