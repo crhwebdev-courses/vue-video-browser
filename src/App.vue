@@ -2,6 +2,7 @@
   <div>
     <SearchBar @termChange="onTermChange"></SearchBar>
     <VideoList></VideoList>
+    {{this.videos.length}}
   </div>
 </template>
 
