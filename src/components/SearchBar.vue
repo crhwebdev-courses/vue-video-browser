@@ -10,7 +10,8 @@ export default {
   name: 'SearchBar',
   methods: {
     onInput: function(event){
-      console.log(event.target.value);
+      //emmit an event on input change to signal to App component
+      this.$emit('termChange', event.target.value);
     }
   }
 };
