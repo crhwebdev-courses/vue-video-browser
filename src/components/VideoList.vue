@@ -1,6 +1,6 @@
 <template>
 <div>
-  <ul>  
+  <ul class="list-group">  
     <VideoListItem 
       v-for="video in videos" 
       :video="video"
