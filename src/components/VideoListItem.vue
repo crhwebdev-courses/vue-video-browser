@@ -9,6 +9,7 @@
 </template>
 
 <script>
+/* eslint-disable */
   export default {
     name: 'VideoListItem',
     props: [
@@ -20,7 +21,7 @@
       }
     },
     methods: {
-      onVideoSelect(){
+      onVideoSelect(){        
         this.$emit('videoSelect', this.video)
       }
     }

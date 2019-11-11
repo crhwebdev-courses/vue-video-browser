@@ -4,8 +4,10 @@
     <VideoListItem 
       v-for="video in videos" 
       :video="video"
-      :key="video.id.videoId">
+      :key="video.id.videoId"
       @videoSelect="onVideoSelect"
+    >
+      
     </VideoListItem>
   </ul>
 </div>
@@ -24,7 +26,7 @@ export default {
     videos: Array
   },
   methods: {
-    onVideoSelect(video){
+    onVideoSelect(video){      
       this.$emit('videoSelect', video);
     }
   }  
