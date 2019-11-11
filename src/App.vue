@@ -36,7 +36,7 @@ export default {
       }).then(response => {this.videos = response.data.items; });
     },
     onVideoSelect(video){
-      console.log(`App recieved videoSelect event from: ${video.snippet.title}`);
+      console.log(video);
     }
   }  
 };
