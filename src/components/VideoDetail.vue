@@ -8,11 +8,11 @@
 /* eslint-disable */
 export default {
   name: 'VideoDetail',
-  props: ['selectedVideo'],
+  props: ['video'],
   computed: {
     videoTitle: function(){
-      if(this.selectedVideo){
-        return this.selectedVideo.snippet.title;
+      if(this.video){
+        return this.video.snippet.title;
       }
 
       return '';

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <SearchBar @termChange="onTermChange"></SearchBar>
-    <VideoDetail :selectedVideo="selectedVideo"></VideoDetail>
+    <VideoDetail :video="selectedVideo"></VideoDetail>
     <VideoList :videos="videos" @videoSelect="onVideoSelect"></VideoList>
   </div>
 </template>
