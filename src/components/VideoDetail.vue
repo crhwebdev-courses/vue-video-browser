@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>VideoDetail</h2>
+    <h2>{{videoTitle}}</h2>
   </div>
 </template>
 
@@ -8,6 +8,15 @@
 /* eslint-disable */
 export default {
   name: 'VideoDetail',
-  props: ['video']
+  props: ['selectedVideo'],
+  computed: {
+    videoTitle: function(){
+      if(this.selectedVideo){
+        return this.selectedVideo.snippet.title;
+      }
+
+      return '';
+    }
+  }
 };
 </script>
