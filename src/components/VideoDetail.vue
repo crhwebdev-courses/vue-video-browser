@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h2>{{videoTitle}}</h2>
+  <div v-if="video">
+    <h2>{{video.snippet.title}}</h2>
   </div>
 </template>
 
@@ -8,15 +8,6 @@
 /* eslint-disable */
 export default {
   name: 'VideoDetail',
-  props: ['video'],
-  computed: {
-    videoTitle: function(){
-      if(this.video){
-        return this.video.snippet.title;
-      }
-
-      return '';
-    }
-  }
+  props: ['video'],  
 };
 </script>
