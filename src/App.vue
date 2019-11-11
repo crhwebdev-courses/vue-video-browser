@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <SearchBar @termChange="onTermChange"></SearchBar>
+    <VideoDetail></VideoDetail>
     <VideoList :videos="videos" @videoSelect="onVideoSelect"></VideoList>
   </div>
 </template>
@@ -11,18 +12,21 @@ import axios from 'axios';
 import YouTube from '../credentials/youtube.js';
 import SearchBar from './components/SearchBar';
 import VideoList from './components/VideoList';
+import VideoDetail from './components/VideoDetail';
 
 //Note: need to list all components used in components property
 export default {
   name: 'App',
   data: function(){
     return {
-      videos: []
+      videos: [],
+      selectedVideo: null
     };
   },
   components: {
     SearchBar,
-    VideoList
+    VideoList,
+    VideoDetail
   },
   methods: {
     onTermChange(searchTerm){
@@ -36,7 +40,7 @@ export default {
       }).then(response => {this.videos = response.data.items; });
     },
     onVideoSelect(video){
-      console.log(video);
+      this.selectedVideo = video;
     }
   }  
 };
